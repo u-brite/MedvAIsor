@@ -1,3 +1,7 @@
+
+
+<img src="https://user-images.githubusercontent.com/56318274/183275332-34929a96-7ae8-4901-a4c5-fb4c43249962.png" width="200" >
+
 # MedvAIsor
 The MedvAIsor acronym is a fusion of the word Medicine + (Advisor + AI). This hackathon project built a web-based tool that showcases a GBM case study where we can perform virtual drug screening for seven FDA-approved GBM drugs. The tool takes the GBM cancer cell line of 657 genes as input and predicts the efficacy of the seven drugs. The tool screens individual cancer cell lines and shows the effectiveness of each drug along with its threshold values. In this project, we also showcase the use of NLP to process the drugs SMILES in a novel way, and this method enables us to build a competent model that we used in our MedvAIsor tool. This project also shows that the ML model we developed for MedvAIsor generalizes performing drug repurposing. We proved this by predicting the efficiently repurposing of two drugs, Temozolomide and Carmustine, with MAE of (0.5 and 0.4, respectively). These two drugs are already approved for GBM treatment by FDA.
 
