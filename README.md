@@ -8,6 +8,16 @@ Personalized drug screening is one of the vital drug development phases for prec
 ![project-Page-8 drawio](https://user-images.githubusercontent.com/56318274/183274235-28ad53c6-de52-4bd3-aa15-7c04e469dbf4.png)
 In this hackathon, we attempt to build a personalized drug screening tool called MedvAIsor that uses Gene Expression data of patients’ tumor cell lines and predicts the efficacy of the drugs in LN(IC50). The demonstrator of the tool is built using the Python Streamilit App. The tool is dedicated to showcasing the study of the Glioblastoma Multiform (GBM) case study.  Besides the tool, the project also put forward an innovative way of processing the drug data (SMILES) using Natural Language Procession. We also show how the ML model used by MedvAIsor for drug screening can be used to perform drug repurposing for the approved FDA drugs for GBM cancer. ![image](https://user-images.githubusercontent.com/56318274/183274287-fd45deb8-3e39-4c7d-87df-9eef730f9737.png)
 
+## MedvAIsor Web App for Glioblatoma Multiforme (GBM) Cancer Case Study
+![Screen Shot 2022-08-06 at 7 09 10 PM](https://user-images.githubusercontent.com/56318274/183275115-33b9df7d-8ad8-4404-b7ce-4b8240501e1c.png)
+The MedvAIsor tool is the main contribution of this Hackathon project, where we developed the web-based software to screen GBM cancer cell lines (657 Genes; see Table 6). The tool deploys the ML model developed for Personalized drug screening (described in the previous section).  The input to the MedvAIsor App is a CSV file containing a header depicting the ‘SAMPLE_ID’ and 657 gene names (as mentioned in Table 6). To use the tool, get this [link](https://esaghapour-bokeh-test-example-w7iblm.streamlitapp.com/), upload the sample CSV (AllGE_GBM_657.csv) file in the GitHub of MedvAisor/App, and watch the video tutorial at  [Link](https://github.com/u-brite/MedvAIsor/blob/main/App/Tutorial_MedvAIsor.webm)
+
+### Single GBM Sample Screening Result with acceptable LN(IC50) Range Indications
+![Screen Shot 2022-08-06 at 7 09 41 PM](https://user-images.githubusercontent.com/56318274/183275237-be058796-53be-4510-9d23-b9c0a16590cf.png)
+
+### Multi GBM Samples Screening Results 
+![Screen Shot 2022-08-06 at 7 10 07 PM](https://user-images.githubusercontent.com/56318274/183275256-bb988df8-ff5c-45e4-a1f3-e58c1a52aea1.png)
+
 # Project Highlights
 
 ## This Project Uses a unique Combination of Drug-Disease-Gene Expression data to perform Personalized Drug Screening
