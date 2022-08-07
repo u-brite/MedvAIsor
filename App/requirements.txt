@@ -1,0 +1,7 @@
+streamlit
+pycaret
+pandas
+plotly
+numpy
+streamlit-aggrid
+pillow
