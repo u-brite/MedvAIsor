@@ -1,111 +1,52 @@
-# team-repo-template
-:exclamation: _This top heading should be the name of your project i.e. BiocSwirl or SNVariome. Anything between 2 exclamation marks is intended to be deleted. Any content that isn't a heading or an optional heading can be deleted as well. The structure of this readme is open to any creative changes, but the main components of Background/Data/Usage/Team Members should remain. You're free to add images and get creative about how you want your readme to look._ :exclamation:
+# MedvAIsor
+The MedvAIsor acronym is a fusion of the word Medicine + (Advisor + AI). This hackathon project built a web-based tool that showcases a GBM case study where we can perform virtual drug screening for seven FDA-approved GBM drugs. The tool takes the GBM cancer cell line of 657 genes as input and predicts the efficacy of the seven drugs. The tool screens individual cancer cell lines and shows the effectiveness of each drug along with its threshold values. In this project, we also showcase the use of NLP to process the drugs SMILES in a novel way, and this method enables us to build a competent model that we used in our MedvAIsor tool. This project also shows that the ML model we developed for MedvAIsor generalizes performing drug repurposing. We proved this by predicting the efficiently repurposing of two drugs, Temozolomide and Carmustine, with MAE of (0.5 and 0.4, respectively). These two drugs are already approved for GBM treatment by FDA.
 
-:exclamation: _The `configs` and `notebooks` directories are also optional. We recommend taking a look at [cookiecutter for datascience](https://github.com/drivendata/cookiecutter-data-science) or [cookiecutter for computational biology](https://github.com/drivendata/cookiecutter-data-science) to get ideas on structuring your projects. Also, use a `.gitignore` that fits the main programming language of your project._ :exclamation:
+## Motivation
+Personalized drug screening is one of the vital drug development phases for precision oncology. In this phase, each patient is screened for the efficacy of a given drug on a particular type of cancer. For this phase, the in-vivo screening is challenging; therefore, in-vitro screening is widespread. Cancer samples are screened for drug perturbations on tumors, and treatment can be recommended. The duration of in-vitro screening also varies from 6 to 72 hours (but can be longer). The drug perturbation screening facility is also unavailable in most clinics; therefore, logistics delay the screening time. One can view model-based virtual screening as a solution to such delays. Thus, in-silico drug screening is also becoming essential for precision oncology.
 
-## Table of Contents
+## Project Overview
+![project-Page-8 drawio](https://user-images.githubusercontent.com/56318274/183274235-28ad53c6-de52-4bd3-aa15-7c04e469dbf4.png)
+In this hackathon, we attempt to build a personalized drug screening tool called MedvAIsor that uses Gene Expression data of patients’ tumor cell lines and predicts the efficacy of the drugs in LN(IC50). The demonstrator of the tool is built using the Python Streamilit App. The tool is dedicated to showcasing the study of the Glioblastoma Multiform (GBM) case study.  Besides the tool, the project also put forward an innovative way of processing the drug data (SMILES) using Natural Language Procession. We also show how the ML model used by MedvAIsor for drug screening can be used to perform drug repurposing for the approved FDA drugs for GBM cancer. ![image](https://user-images.githubusercontent.com/56318274/183274287-fd45deb8-3e39-4c7d-87df-9eef730f9737.png)
 
-- [Template](#team-repo-template)
-    - [Background](#Background)
-    - [Data](#data)
-    - [Usage](#usage)
-        - [Installation](#installation)
-        - [Requirements](#requirements) _Can be named Dependencies as well_
-        - [Activate conda environment](#activate-conda-environment) _Optional_
-        - [Steps to run ](#steps-to-run) _Optional depending on project_
-            - [Step-1](#step-1)
-            - [Step-2](#step-2)
-    - [Results](#results) _Optional depending on project_
-    - [Team Members](#team-members)
+# Project Highlights
 
-## Background
+## This Project Uses a unique Combination of Drug-Disease-Gene Expression data to perform Personalized Drug Screening
+![projectDiagram-Page-19 drawio (2)-Page-6 drawio](https://user-images.githubusercontent.com/56318274/183274399-cfdd6861-18dc-4056-8141-b2e4fbe4a74a.png)
 
-:exclamation: _Include background on the project, project description, and significance. This will be converted to your team's abstract by the end of the hackathon. This should be updated by Monday, August 1st to include feedback given._ :exclamation:
+## The ML model is a LightGBM Regression Algorithm and Predicts Drug Perturbations in the form of LN(IC50)
 
-## Data
+![projectDiagram-Page-19 drawio (2)-Page-7 drawio](https://user-images.githubusercontent.com/56318274/183274512-e5dd46b6-7ca6-4160-97ed-a245ba8f0541.png)
 
-:exclamation: _Discuss the data you used and how it can be accessed._ :exclamation:
+## NLP is used to extract Features from Drug Smiles
+![image](https://user-images.githubusercontent.com/56318274/183274573-27d76652-87ac-4780-a7b6-9f5fdbf320d3.png)
 
-## Usage
+## The Model also Generalizes to repurpose FDA approved Glioblastoma Drugs (Temozolomide and Carmustine)
 
-:exclamation: _How will someone not involved in your project be able to run the code or use it._ :exclamation:
+![image](https://user-images.githubusercontent.com/56318274/183274651-73ad8e57-200d-441f-aa00-74ba1a8ddfb8.png)
+![image](https://user-images.githubusercontent.com/56318274/183274666-6145edb1-09d2-4087-8655-78b0c6020933.png)
 
-### Installation
+# Applications
+## Impact of Project in Medicine Domain (Drug Recommendations)
+The GBM case study of the MedvAIsor web app shows the potential of our tool where the doctor can provide the gene expression (657 genes) of a patient’s tumor to the software and get the screening values of the seven drugs. This result will help the doctor make the Monotherapy treatment plan for the patient.
+## Impact of work in Drug Discovery (Drug Screening & repurposing)
+The ML model built in this hackathon can be you to check the varying effects of the seven drugs on multiple patients. This helps select a cohort for clinical trials for de-novo drug discovery or drug repurposing (this screening is only possible with drugs that are structurally similar to the seven drugs)
 
-:exclamation: _If installation is required, please mention how to do so here._ :exclamation:
-
-Installation simply requires fetching the source code. Following are required:
-
-- Git
-
-To fetch source code, change in to directory of your choice and run:
-
-```sh
-git clone -b main \
-    git@github.com:u-brite/team-repo-template.git
-```
-
-### Requirements
-:exclamation: _Note any software used (including Python or R packages), operating system requirements, etc. and its version so that your project is reproducible. It does not have to be in the below format_ :exclamation:
-
-*OS:*
-
-Currently works only in Linux OS. Docker versions may need to be explored later to make it useable in Mac (and
-potentially Windows).
-
-*Tools:*
-
-- Anaconda3
-    - Tested with version: 2020.02
-
-### Activate conda environment
-:exclamation: _Optional: Depends on project._ :exclamation:
-
-Change in to root directory and run the commands below:
-
-```sh
-# create conda environment. Needed only the first time.
-conda env create --file configs/environment.yaml
-
-# if you need to update existing environment
-conda env update --file configs/environment.yaml
-
-# activate conda environment
-conda activate testing
-```
-
-### Steps to run
-:exclamation: _Optional: Depends on project._ :exclamation:
-
-#### Step 1
-
-```sh
-python src/data_prep.py -i path/to/file.tsv -O path/to/output_directory
-```
-
-#### Step 2
-
-```sh
-python src/model.py -i path/to/parsed_file.tsv -O path/to/output_directory
-```
-
-Output from this step includes -
-
-```directory
-output_directory/
-├── parsed_file.tsv               <--- used for model
-├── plot.pdf- Plot to visualize data
-└── columns.csv - columns before and after filtering step
-
-```
-
-**Note**: The is an example note with a [link](https://github.com/u-brite/team-repo-template).
-
-
-## Results
-:exclamation: _If your project yielded or intends to yield some novel analysis, please include them in your readme. It can be named something other than results as well._ :exclamation:
 
 ## Team Members
+Arsalan Ahmad | aahmad@asfaschool.org | Data Analysis work
 
-Tarun Mamidi | tmamidi@uab.edu | Team Leader  
-Shaurita Hutchins | shutchins@uab.edu | Co-leader
+DaVonte Curtis | davontecurtis4@gmail.com | Product Developer
+
+Kermit Glenn Booker Jr | kermit.booker@bulldogs.aamu.edu | Product Developer
+
+Rizwan Ahmad | rizwanahmad95@outlook.com | Data Analysis work
+
+Mary Doamekpor | mdoam5@uab.edu | Biologist
+
+Radomir Slominski | rslom@uab.edu | Biologist
+
+Dr. Ehsan Saghapour | ehsan.saghapour@gmail.com | Machine Learning and Data Science
+
+Dr. Rahul Sharma | rsharma3@uab.edu | Team Lead
+
+Dr. Jake Y. Chen | jakechen@uab.edu | Mentor
